@@ -5,7 +5,7 @@ const LoginPage: React.FC = () => {
 
 
     const handleLogin = () => {
-    window.location.href ='https://main-sso-front.vercel.app?clientId=client-app-2'
+    window.location.href ='https://main-sso-front.netlify.app?clientId=client-app-2'
     };
 
     return (
