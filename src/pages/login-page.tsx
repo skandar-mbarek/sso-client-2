@@ -5,7 +5,7 @@ const LoginPage: React.FC = () => {
 
 
     const handleLogin = () => {
-    window.location.href ='https://main-sso-front-p9y1w1ndf-skandar-mbareks-projects.vercel.app?clientId=client-app-2'
+    window.location.href ='https://main-sso-front.vercel.app?clientId=client-app-2'
     };
 
     return (
