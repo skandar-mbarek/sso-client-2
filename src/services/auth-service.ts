@@ -52,7 +52,7 @@ export const AuthorizeClient = async (): Promise<AuthorizeClientRes> => {
         }
 
         if (response.status === 400) {
-            const redirectUrl = `http://localhost:3000?clientUrl=${encodeURIComponent(currentUrl)}`;
+            const redirectUrl = `https://main-sso-front.netlify.app?clientUrl=${encodeURIComponent(currentUrl)}`;
             window.location.href = redirectUrl;
             throw new Error('BadRequest - Redirecting to login');
         }
