@@ -44,7 +44,6 @@ export const AuthorizeClient = async (): Promise<AuthorizeClientRes> => {
                 },
                 validateStatus: () => true ,
                 withCredentials: true
-
             }
         );
         if (response.status === 200 && response.data?.access_token) {
