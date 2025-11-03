@@ -5,7 +5,8 @@ const LoginPage: React.FC = () => {
 
 
     const handleLogin = () => {
-    window.location.href ='https://main-sso-front.netlify.app?clientId=client-app-2'
+        const currentUrl = window.location.href;
+        window.location.href =`http://localhost:3000?clientUrl=${encodeURIComponent(currentUrl)}` ;
     };
 
     return (
@@ -81,10 +82,10 @@ const LoginPage: React.FC = () => {
                     }}
                 >
 
-                        <>
-                            <span>🚀</span>
-                            <span>Login with Bookini Identity</span>
-                        </>
+                    <>
+                        <span>🚀</span>
+                        <span>Login with Bookini Identity</span>
+                    </>
 
                 </button>
 

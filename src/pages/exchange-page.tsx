@@ -6,7 +6,7 @@ const ExchangePage: React.FC = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
 
-    const exchangeCode = searchParams.get("exchangeCode") ?? "";
+    const exchangeCode = searchParams.get("code") ?? "";
 
     const exchangeTokenMutation = useExchangeToken();
 
@@ -16,8 +16,6 @@ const ExchangePage: React.FC = () => {
             navigate("/login");
             return;
         }
-
-        // Automatically call the exchange token hook
         exchangeTokenMutation.mutate({ code: exchangeCode });
     }, [exchangeCode]);
 

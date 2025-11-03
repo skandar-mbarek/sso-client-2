@@ -10,8 +10,8 @@ export const useExchangeToken = () => {
         mutationFn: (credentials: ExchangeTokenReq) => ExchangeToken(credentials),
         onSuccess: (data: ExchangeTokenRes, variables: ExchangeTokenReq) => {
 
-            if (data.token) {
-                localStorage.setItem('token', data.token);
+            if (data.access_token) {
+                localStorage.setItem('token', data.access_token);
             }
             navigate(`/`);
         },
